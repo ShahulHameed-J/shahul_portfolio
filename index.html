@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Shahul Hameed J — Java and Spring Boot developer." />
+  <title>Shahul Hameed J | Software Developer</title>
+  <style>
+    :root{--bg:#090d18;--panel:#101729;--panel2:#131e33;--text:#f4f7ff;--muted:#a9b4cc;--accent:#7c9cff;--accent2:#53e0c1;--line:rgba(255,255,255,.1);--max:1120px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{margin:0;background:radial-gradient(ellipse at 85% 5%,#1a2450 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,13,24,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:-.04em;font-size:1.12rem}.brand span{color:var(--accent2)}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--text)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 11px;border-radius:10px}
+    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:54px;min-height:590px}
+    .eyebrow{color:var(--accent2);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em}
+    h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:1.04;letter-spacing:-.065em;margin:18px 0 22px}h1 span{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:1.12rem;max-width:650px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.2s}.btn.primary{background:linear-gradient(110deg,#7995ff,#58d9c3);color:#07111c;border:0}.btn:hover{transform:translateY(-2px)}
+    .hero-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(21,31,54,.95),rgba(13,19,34,.9));padding:28px;border-radius:24px;box-shadow:0 25px 90px rgba(0,0,0,.25)}
+    .terminal{font: .9rem/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;color:#dbe6ff}.dots{display:flex;gap:6px;margin-bottom:22px}.dots i{width:9px;height:9px;border-radius:50%;background:#7182a6}.terminal .green{color:var(--accent2)}.terminal .blue{color:#9cb0ff}
+    .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.stat{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:14px;padding:15px}.stat strong{display:block;font-size:1.45rem}.stat small{color:var(--muted)}
+    section{padding:76px 0}.section-head{max-width:680px;margin-bottom:30px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.05em;margin:9px 0 12px}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(150deg,rgba(19,30,51,.92),rgba(13,19,33,.92));border:1px solid var(--line);border-radius:20px;padding:25px}.card h3{margin:8px 0 9px;font-size:1.2rem}.card p{color:var(--muted);margin:0}.iconbox{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:rgba(124,156,255,.13);color:var(--accent);font-size:1.2rem}
+    .taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font-size:.8rem;color:#d8e2ff;background:rgba(124,156,255,.1);border:1px solid rgba(124,156,255,.18);padding:5px 10px;border-radius:100px}
+    .timeline{border-left:1px solid rgba(124,156,255,.4);margin-left:8px;padding-left:27px}.timeline-item{position:relative;margin-bottom:28px}.timeline-item:before{content:"";position:absolute;width:11px;height:11px;background:var(--accent2);border-radius:50%;left:-33px;top:8px;box-shadow:0 0 0 5px rgba(83,224,193,.1)}.date{color:var(--accent2);font-size:.85rem;font-weight:700}.timeline h3{margin:5px 0}.timeline p{color:var(--muted);margin:0}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:11px 15px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+    .education{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.education .card{height:100%}.contactbox{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:linear-gradient(115deg,rgba(124,156,255,.14),rgba(83,224,193,.08));border:1px solid var(--line);border-radius:24px;padding:32px}.contactbox h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.04em;margin:0 0 8px}.contactbox p{color:var(--muted);margin:0}
+    footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .note{font-size:.88rem;color:var(--muted)}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.links a{color:var(--accent2);text-decoration:underline;text-underline-offset:4px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:72px;gap:30px}.hero-card{max-width:560px}.grid,.education{grid-template-columns:1fr}.navlinks{display:none;position:absolute;left:0;right:0;top:72px;padding:18px 20px;background:#0d1424;border-bottom:1px solid var(--line);flex-direction:column;gap:14px}.navlinks.open{display:flex}.menu{display:block}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="brand" href="#home">SH<span>.</span></a>
+  <button class="menu" id="menuBtn" aria-label="Toggle navigation">Menu</button>
+  <div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Java · Backend · Problem Solving</div>
+      <h1>Hi, I'm Shahul<br><span>Hameed J.</span></h1>
+      <p class="lead">Computer Science Engineering student focused on building secure backend applications with Java, Spring Boot, SQL, and REST APIs. I enjoy solving coding problems and creating reliable software experiences.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my work ↘</a><a class="btn" href="#contact">Contact me</a></div>
+      <div class="links"><a href="mailto:shahulhameedjhussain@gmail.com">Email</a><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub — add your profile URL</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn — add your profile URL</a></div>
+    </div>
+    <aside class="hero-card">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="terminal"><div><span class="blue">const</span> developer = {</div><div>&nbsp; name: <span class="green">"Shahul Hameed J"</span>,</div><div>&nbsp; focus: <span class="green">"Backend Development"</span>,</div><div>&nbsp; stack: [<span class="green">"Java"</span>, <span class="green">"Spring Boot"</span>],</div><div>&nbsp; mindset: <span class="green">"Build. Learn. Improve."</span></div><div>};</div><br><div class="green">// Ready to solve real problems.</div></div>
+      <div class="statgrid"><div class="stat"><strong>250+</strong><small>Coding problems solved</small></div><div class="stat"><strong>1,000+</strong><small>Skillrack problems</small></div></div>
+    </aside>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">About me</div><h2>Building dependable software, one problem at a time.</h2><p>I'm pursuing a B.E. in Computer Science Engineering at St. Joseph’s College of Engineering. My interests include backend engineering, secure APIs, database design, and practical application development.</p></div>
+    <div class="grid">
+      <article class="card"><div class="iconbox">⌘</div><h3>Backend development</h3><p>Experience designing RESTful APIs, working with MySQL data models, and implementing JWT-based authentication in application projects.</p></article>
+      <article class="card"><div class="iconbox">◎</div><h3>Problem solving</h3><p>Practising data structures and algorithms through coding platforms, with 250+ problems solved and 1,000+ problems on Skillrack, as listed in my resume.</p></article>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Experience</div><h2>Where I've contributed</h2><p>Practical experience developing backend features and collaborating across the application stack.</p></div>
+    <div class="card timeline"><div class="timeline-item"><div class="date">July 2025</div><h3>Backend Developer Intern · Retech Solutions Ltd</h3><p>Designed and implemented REST APIs for an e-commerce application, covering user management, product catalogue, cart operations, and order processing. Worked with MySQL schemas and JWT authentication, explored caching and query tuning to improve response times, and collaborated with frontend developers on API contracts.</p><div class="taglist"><span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">MySQL</span><span class="tag">JWT</span><span class="tag">API integration</span></div></div></div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Featured project</div><h2>Projects that put skills into practice.</h2><p>One highlighted project from my resume. Add your repository and demo links before publishing.</p></div>
+    <article class="card">
+      <div class="iconbox">⌂</div><h3>AI Banking Assistant</h3>
+      <p>A conversational banking application built to help users access banking operations through natural-language requests. The application uses AI-powered request interpretation and backend APIs to support account balance inquiries, fund transfers, and transaction history.</p>
+      <div class="taglist"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">MySQL</span><span class="tag">OpenAI API</span><span class="tag">JWT</span><span class="tag">Transaction management</span></div>
+      <div class="links"><a href="https://github.com/" target="_blank" rel="noreferrer">Add project repository ↗</a></div>
+    </article>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Technical toolkit</div><h2>Skills I bring to a team.</h2><p>Technologies and strengths listed in my resume.</p></div>
+    <div class="skills"><span class="skill">Java</span><span class="skill">Spring Boot</span><span class="skill">SQL</span><span class="skill">OOP / OOPS</span><span class="skill">Data Structures & Algorithms</span><span class="skill">REST APIs</span><span class="skill">MySQL</span><span class="skill">JWT Authentication</span><span class="skill">React</span><span class="skill">Teamwork</span><span class="skill">Adaptability</span><span class="skill">Leadership</span></div>
+  </div></section>
+
+  <section id="education"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Education & credentials</div><h2>Learning with consistency.</h2></div>
+    <div class="education">
+      <div class="card"><h3>B.E. Computer Science Engineering</h3><p>St. Joseph’s College of Engineering</p><p class="note">2023 – Present · CGPA 8.15 (as listed in resume)</p><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3>Higher Secondary · CBSE</h3><p>Velammal Vidyalaya</p><p class="note">2022–2023 · 70.6%</p><h3 style="margin-top:20px">Secondary · CBSE</h3><p>Velammal Vidyalaya</p><p class="note">2020–2021 · 71.2%</p></div>
+      <div class="card"><h3>Certifications & achievements</h3><p>• Cisco Certification — Operating Systems</p><p style="margin-top:12px">• NPTEL — Demystifying Networking</p><p>• NPTEL — Database Management System</p><p>• NPTEL — Python for Data Science</p><div class="taglist"><span class="tag">250+ coding problems</span><span class="tag">1,000+ Skillrack problems</span></div></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap"><div class="contactbox"><div><div class="eyebrow">Contact</div><h2>Let's build something useful.</h2><p>Open to connecting about entry-level software development opportunities.</p></div><a class="btn primary" href="mailto:shahulhameedjhussain@gmail.com">✉ Email Shahul</a></div>
+    <p class="note" style="margin-top:16px">Phone: +91 9500810100 · Replace or remove personal contact details if you prefer not to publish them publicly.</p>
+  </div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Shahul Hameed J</span><span>Designed for clarity · Built with HTML, CSS & JavaScript</span></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn'), navlinks=document.getElementById('navlinks');
+  menuBtn.addEventListener('click',()=>navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
